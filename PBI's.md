@@ -8,11 +8,11 @@ PBI's:
 
 4.  As a user, I need to be able to see my charcter's decimal unicode number, so that
 
-5.  As a user, I need to be able to see my character's alpha entities , so that
+5.  As a user, I need to be able to see my character's alpha entities , so that I can code the most common characters in HTML.
 
-6.  As a user, I need to be able to see my character's hex entities, so that
+6.  As a user, I need to be able to see my character's decimal enities, so that I can code the characters in HTML that don't have an alpha entity.
 
-7.  As a user, I need to be able to see my character's decimal enities, so that
+7.  As a user, I need to be able to see my character's hex entities, so that I can code the characters in HYML that don't have a decimal entity.
 
 8.  As a user, I need to be able to see how to code my character in Java, so that we can use it in a java program
 
