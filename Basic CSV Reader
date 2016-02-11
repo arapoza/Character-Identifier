@@ -7,9 +7,12 @@ public class csvReader {
 
     public static void main(String[] args) throws FileNotFoundException {
         Scanner scanner = new Scanner(new File("/Users/wshuhda/Desktop/entityfacts.csv"));
+        Scanner input = new Scanner(System.in);
         scanner.useDelimiter(",");
-        while(scanner.hasNext()){
-            System.out.print(scanner.next()+"|");
+        while(scanner.hasNextLine()){
+            System.out.println(scanner.next());
+            System.out.println("Please hit enter to get next line");
+            String inputStr = input.nextLine();
         }
         scanner.close();
     }
