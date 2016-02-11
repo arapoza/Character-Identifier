@@ -27,9 +27,10 @@ public class CSVReader {
 		        // use comma as separator
 			String[] character = line.split(cvsSplitBy);
 
-			for ( int i=0; i<100; i++ )
+//			for ( int i=0; i<character.length ; i++ )
 		    {
-			System.out.println(character[i]);
+			character[0] = character[0].replaceAll("\\s", "");
+			System.out.println(line);
 
 		    }
 		}
