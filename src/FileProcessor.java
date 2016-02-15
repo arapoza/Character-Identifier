@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class FileProcessor
 {
-	public void run(String hexValue) {
+	public String[] run(String hexValue) {
 		String csvFile = "/Users/araposa/Downloads/entityfacts.csv";
 		BufferedReader br = null;
 		String line = "";
@@ -32,7 +32,7 @@ public class FileProcessor
 				{
 					if(hexValue.equals(character[1]))
 					{
-						System.out.println(character[4]);	
+						return character;	
 					}
 				}
 			}
@@ -51,6 +51,7 @@ public class FileProcessor
 		}
 
 		System.out.println("Done");
+		return null;
 	}
 
 	public String convertToHex(){
