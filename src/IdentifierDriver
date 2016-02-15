@@ -1,0 +1,10 @@
+
+	public class IndentifierDriver{
+		  
+		  public static void main(String[] args){
+		    DisplayWindow d = new DisplayWindow();
+		    IndentifierLayout2 p = new IndentifierLayout2();
+		    d.addPanel(p);
+		    d.showFrame();
+		  }
+		}
