@@ -8,3 +8,6 @@ Sources:
 
 3. How to organize JFrame code (iJava):
       12.2 in iJava
+
+4. Jframe help editing fonts:
+https://www.daniweb.com/programming/software-development/threads/243234/how-to-change-the-font-size-and-text-position-of-a-textfield
