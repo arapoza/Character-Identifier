@@ -2,7 +2,7 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*; // needed for event handling
 
-public  class IndentifierLayout2 extends JPanel implements ActionListener{
+public  class IdentifierLayout2 extends JPanel implements ActionListener{
   // make quit button 
   JButton quit = new JButton("Quit"); 
 //submit button
@@ -50,9 +50,9 @@ public  class IndentifierLayout2 extends JPanel implements ActionListener{
 		
 
   // location of rectangle northwest corner 
-  public IndentifierLayout2(){
+  public IdentifierLayout2(){
 	  
-    setPreferredSize(new Dimension(475,125));
+    setPreferredSize(new Dimension(600,200));
     setBackground(Color.white);
     
     
@@ -97,8 +97,15 @@ public  class IndentifierLayout2 extends JPanel implements ActionListener{
       System.exit(0); 
     else
       // square button signal 
-      if(e.getSource() == button){ 
+      if(e.getSource() == button){
+    	  FileProcessor input = new FileProcessor();
+    	  String hexValue = input.convertToHex(textField.getText());
+    	  String[] character = input.run(hexValue);
     	  characterfield.setText(textField.getText());
+    	  
+    	  hexunifield.setText(character[1]);
+
+    	
     }
   }
 }
