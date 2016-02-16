@@ -2,7 +2,6 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Scanner;
 
 public class FileProcessor
 {
@@ -56,11 +55,7 @@ public class FileProcessor
 	}
 
 	public String convertToHex(String s){
-//		Scanner input = new Scanner(System.in);
-//		String s = input.nextLine();
 		int decValue = s.codePointAt(0);
-		//input.close();
-
 		String hexValue = Integer.toHexString(decValue);
 		hexValue = ("0x" + hexValue);
 		return hexValue;

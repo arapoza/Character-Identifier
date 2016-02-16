@@ -104,6 +104,8 @@ public  class IdentifierLayout2 extends JPanel implements ActionListener{
     	  characterfield.setText(textField.getText());
     	  
     	  hexunifield.setText(character[1]);
+    	  alphafield.setText(character[3]);
+    	  descfield.setText(character[4]);
 
     	
     }
