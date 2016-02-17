@@ -54,13 +54,13 @@ public class FileProcessor
 		return null;
 	}
 
-	public Integer convertToDec(String s){
+	public int convertToDec(String s){
 		Integer decValue = s.codePointAt(0);
 		return decValue;
 	}
 
 	public String convertToHex(String s){
-		int decValue = s.codePointAt(0);
+		int decValue = convertToDec(s);
 		String hexValue = Integer.toHexString(decValue);
 		hexValue = ("0x" + hexValue);
 		return hexValue;
