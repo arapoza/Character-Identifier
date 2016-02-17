@@ -31,7 +31,7 @@ public class FileProcessor
 				{
 					if(hexValue.equals(character[1]))
 					{
-//						System.out.println(character[4]);
+						//						System.out.println(character[4]);
 						return character;	
 					}
 				}
@@ -52,6 +52,11 @@ public class FileProcessor
 
 		System.out.println("Done");
 		return null;
+	}
+
+	public Integer convertToDec(String s){
+		Integer decValue = s.codePointAt(0);
+		return decValue;
 	}
 
 	public String convertToHex(String s){
