@@ -16,9 +16,13 @@ public  class IdentifierLayout2 extends JPanel implements ActionListener{
 		
 		JLabel characterlabel = new JLabel("Larger font:");
 		
-		JLabel hexunilabel = new JLabel("Hex Unicode and entity:");
+		JLabel hexunilabel = new JLabel("Hex Unicode number:");
 		
-		JLabel decunilabel = new JLabel("Decimal Unicode and entity:");
+		JLabel hexentlabel = new JLabel("HTML hex entity:");
+		
+		JLabel decunilabel = new JLabel("Decimal Unicode number:");
+		
+		JLabel decentlabel = new JLabel("Decimal HTML entity:");
 		
 		JLabel alphalabel = new JLabel("Alpha entity:");
 		
@@ -27,7 +31,7 @@ public  class IdentifierLayout2 extends JPanel implements ActionListener{
 		JLabel desclabel = new JLabel("Description of Character:");
 		
 		//the following all create individual text fields
-		JTextField textField = new JTextField(1);
+		JTextField textField = new JTextField();
 		
 		JTextField characterfield = new JTextField();
 		
@@ -36,8 +40,13 @@ public  class IdentifierLayout2 extends JPanel implements ActionListener{
 		
 		JTextField hexunifield = new JTextField();
 		
+		
+		JTextField hexentfield = new JTextField();
+		
 
 		JTextField decunifield = new JTextField();
+		
+		JTextField decentfield = new JTextField();
 		
 		
 		JTextField alphafield = new JTextField();
@@ -46,46 +55,113 @@ public  class IdentifierLayout2 extends JPanel implements ActionListener{
 		JTextField javafield = new JTextField();
 		
 		JTextField descfield = new JTextField();
+		private final JLabel label_1 = new JLabel("");
+		private final JLabel label_2 = new JLabel("");
+		private final JLabel label_3 = new JLabel("");
+		private final JLabel label_4 = new JLabel("");
+		private final JLabel label_5 = new JLabel("");
+		private final JLabel label_6 = new JLabel("");
+		private final JLabel label_7 = new JLabel("");
+		private final JLabel label_8 = new JLabel("");
+		private final JLabel label_9 = new JLabel("");
+		private final JLabel label_10 = new JLabel("");
+		private final JLabel label_11 = new JLabel("");
+		private final JLabel label_12 = new JLabel("");
+		private final JLabel label_13 = new JLabel("");
+		private final JLabel label_14 = new JLabel("");
+		private final JLabel label_15 = new JLabel("");
+		private final JLabel label_16 = new JLabel("");
 
 		
 
   // location of rectangle northwest corner 
   public IdentifierLayout2(){
 	  
-    setPreferredSize(new Dimension(600,200));
+    setPreferredSize(new Dimension(800,400));
     setBackground(Color.white);
+    setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
     
     
     // place quit button in panel
     this.add(quit); 
     // panel is listener for quit button 
-    quit.addActionListener(this); 
-    // place square button in panel
-    this.add(button); 
-    // panel is listener for square button 
-    button.addActionListener(this);
+    quit.addActionListener(this);
     // add position input components to panel 
     this.add(label);
+	
+	add(label_1);
+	
+	add(label_2);
+	textField.setColumns(2);
 	this.add(textField);
+	// place square button in panel
+	this.add(button); 
+	// panel is listener for square button 
+	button.addActionListener(this);
+	
+	
 	this.add(button);
 	
+	add(label_3);
+	
+	add(label_4);
+	
 	this.add(characterlabel);
+	
+	add(label_5);
+	characterfield.setColumns(1);
 	this.add(characterfield);
 	characterfield.setFont(font1);
 	
 	this.add(hexunilabel);
+	
+	add(label_6);
+	
+	add(label_7);
+	hexunifield.setColumns(7);
 	this.add(hexunifield);
 	
+	this.add(hexentlabel);
+	hexentfield.setColumns(7);
+	this.add(hexentfield);
+	
+	add(label_8);
+	
 	this.add(decunilabel);
+	
+	add(label_9);
+	decunifield.setColumns(7);
 	this.add(decunifield);
 	
+	this.add(decentlabel);
+	
+	add(label_10);
+	
+	add(label_11);
+	decentfield.setColumns(6);
+	this.add(decentfield);
+	
 	this.add(alphalabel);
+	
+	add(label_12);
+	alphafield.setColumns(7);
 	this.add(alphafield);
 	
 	this.add(javalabel);
+	
+	add(label_13);
+	javafield.setColumns(7);
 	this.add(javafield);
 	
+	add(label_14);
+	
+	add(label_15);
+	
+	add(label_16);
+	
 	this.add(desclabel);
+	descfield.setHorizontalAlignment(SwingConstants.CENTER);
+	descfield.setColumns(20);
 	this.add(descfield);
 	
   }
@@ -104,7 +180,11 @@ public  class IdentifierLayout2 extends JPanel implements ActionListener{
     	  characterfield.setText(textField.getText());
     	  
     	  hexunifield.setText(character[1]);
+    	  hexentfield.setText(input.convertToHexEntity(textField.getText()));
+    	  
     	  decunifield.setText("0x" + String.valueOf(input.convertToDec(textField.getText())));
+    	  decentfield.setText(input.convertToDecEntity(textField.getText()));
+    	  
     	  alphafield.setText(character[3]);
     	  descfield.setText(character[4]);
 

@@ -24,7 +24,7 @@ public class FileProcessor
 				for ( int i=0; i<character.length ; i++ )
 				{
 
-					character[i] = character[i].replaceAll("\\s","");
+					character[i] = character[i].trim();
 
 				}
 				if(character.length > 1)
@@ -59,10 +59,36 @@ public class FileProcessor
 		return decValue;
 	}
 
+	public String convertToDecEntity(String s){
+		String decEntity = String.valueOf(s.codePointAt(0));
+		decEntity = ("&#" + decEntity);
+		return decEntity;
+	}
+	
 	public String convertToHex(String s){
 		int decValue = convertToDec(s);
 		String hexValue = Integer.toHexString(decValue);
 		hexValue = ("0x" + hexValue);
 		return hexValue;
+	}
+	
+	public String convertToHexEntity(String s){
+		int decValue = convertToDec(s);
+		String hexEntity = Integer.toHexString(decValue);
+		
+		if(Integer.toHexString(decValue).length() == 1){
+			hexEntity = ("&#x000" + decValue);
+			}
+		if(Integer.toHexString(decValue).length() == 2){
+			hexEntity = ("&#x00" + hexEntity);
+		}
+		if(Integer.toHexString(decValue).length() == 3){
+			hexEntity = ("&#x0" + hexEntity);
+		}
+		if(Integer.toHexString(decValue).length() == 4){
+			hexEntity = ("&#x" + hexEntity);
+		}
+		
+		return hexEntity;
 	}
 }
