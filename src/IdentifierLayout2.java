@@ -28,6 +28,8 @@ public  class IdentifierLayout2 extends JPanel implements ActionListener{
 		
 		JLabel javalabel = new JLabel("How to code in Java:");
 		
+		JLabel utf8label = new JLabel("UTF-8 encoding");
+		
 		JLabel desclabel = new JLabel("Description of Character:");
 		
 		//the following all create individual text fields
@@ -46,6 +48,7 @@ public  class IdentifierLayout2 extends JPanel implements ActionListener{
 
 		JTextField decunifield = new JTextField();
 		
+		
 		JTextField decentfield = new JTextField();
 		
 		
@@ -53,6 +56,10 @@ public  class IdentifierLayout2 extends JPanel implements ActionListener{
 		
 		
 		JTextField javafield = new JTextField();
+		
+		
+		JTextField utf8field = new JTextField();
+		
 		
 		JTextField descfield = new JTextField();
 		private final JLabel label_1 = new JLabel("");
@@ -159,6 +166,10 @@ public  class IdentifierLayout2 extends JPanel implements ActionListener{
 	
 	add(label_16);
 	
+	this.add(utf8label);
+	utf8field.setColumns(6);
+	this.add(utf8field);
+	
 	this.add(desclabel);
 	descfield.setHorizontalAlignment(SwingConstants.CENTER);
 	descfield.setColumns(20);
@@ -186,6 +197,11 @@ public  class IdentifierLayout2 extends JPanel implements ActionListener{
     	  decentfield.setText(input.convertToDecEntity(textField.getText()));
     	  
     	  alphafield.setText(character[3]);
+    	  
+    	  javafield.setText(input.convertToJava(textField.getText()));
+    	  
+    	 utf8field.setText(input.convertToUtf8(textField.getText()));
+    	  
     	  descfield.setText(character[4]);
 
     	
