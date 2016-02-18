@@ -193,7 +193,7 @@ public  class IdentifierLayout2 extends JPanel implements ActionListener{
     	  hexunifield.setText(character[1]);
     	  hexentfield.setText(input.convertToHexEntity(textField.getText()));
     	  
-    	  decunifield.setText("0x" + String.valueOf(input.convertToDec(textField.getText())));
+    	  decunifield.setText(String.valueOf(input.convertToDec(textField.getText())));
     	  decentfield.setText(input.convertToDecEntity(textField.getText()));
     	  
     	  alphafield.setText(character[3]);
