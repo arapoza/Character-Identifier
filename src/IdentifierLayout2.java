@@ -200,11 +200,10 @@ public  class IdentifierLayout2 extends JPanel implements ActionListener{
     	  
     	  javafield.setText(input.convertToJava(textField.getText()));
     	  
-    	 utf8field.setText(input.convertToUtf8(textField.getText()));
+    	  utf8field.setText(input.convertToUtf8(textField.getText()));
     	  
     	  descfield.setText(character[4]);
-
-    	
+	
     }
   }
 }
