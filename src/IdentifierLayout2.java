@@ -106,7 +106,7 @@ public  class IdentifierLayout2 extends JPanel implements ActionListener{
 	// panel is listener for square button 
 	button.addActionListener(this);
 	
-	
+	//add the TextFields and their labels and configure each based on how many columns needed 
 	this.add(button);
 	
 	add(label_3);

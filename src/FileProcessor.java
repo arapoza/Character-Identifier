@@ -64,21 +64,21 @@ public class FileProcessor
 		decEntity = ("&#" + decEntity);
 		return decEntity;
 	}
-	
+
 	public String convertToHex(String s){
 		int decValue = convertToDec(s);
 		String hexValue = Integer.toHexString(decValue);
 		hexValue = ("0x" + hexValue);
 		return hexValue;
 	}
-	
+
 	public String convertToHexEntity(String s){
 		int decValue = convertToDec(s);
 		String hexEntity = Integer.toHexString(decValue);
-		
+
 		if(Integer.toHexString(decValue).length() == 1){
 			hexEntity = ("&#x000" + hexEntity);
-			}
+		}
 		if(Integer.toHexString(decValue).length() == 2){
 			hexEntity = ("&#x00" + hexEntity);
 		}
@@ -88,17 +88,17 @@ public class FileProcessor
 		if(Integer.toHexString(decValue).length() == 4){
 			hexEntity = ("&#x" + hexEntity);
 		}
-		
+
 		return hexEntity;
 	}
-	
+
 	public String convertToJava(String s){
 		int decValue = convertToDec(s);
 		String javaEntity = Integer.toHexString(decValue);
-		
+
 		if(Integer.toHexString(decValue).length() == 1){
 			javaEntity = ("\\u000" + javaEntity);
-			}
+		}
 		if(Integer.toHexString(decValue).length() == 2){
 			javaEntity = ("\\u00" + javaEntity);
 		}
@@ -108,14 +108,14 @@ public class FileProcessor
 		if(Integer.toHexString(decValue).length() == 4){
 			javaEntity = ("\\u" + javaEntity);
 		}
-		
+
 		return javaEntity;
 	}
-	
+
 	public String convertToUtf8(String s){
 		int decValue = convertToDec(s);
 		String utf8Entity = Integer.toHexString(decValue);
-		
+
 		if(utf8Entity.length() <= 2){
 			return utf8Entity;
 		}
